@@ -75,5 +75,8 @@ typings/
 # FuseBox cache
 .fusebox/
 
-# Lock Json
+# Temporary Archives
+tmp/
+
+# Lock Archives
 package-lock.json
