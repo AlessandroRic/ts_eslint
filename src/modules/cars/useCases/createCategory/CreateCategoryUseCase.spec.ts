@@ -41,10 +41,6 @@ describe("Create category", () => {
                 name: category.name,
                 description: category.description
             });
-    
-            const categoryCreated = await categoriesRepositoryInMemory.findByName(
-                category.name
-            );
         }).rejects.toBeInstanceOf(AppError);
     })
 })
