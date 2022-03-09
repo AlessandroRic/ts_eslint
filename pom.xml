@@ -1,0 +1,42 @@
+<plugin>
+    <groupId>com.github.ts_eslint</groupId>
+    <artifactId>test node</artifactId>
+    <version>1.0</version>
+    <configuration>
+        <installDirectory>target</installDirectory>
+    </configuration>
+    <executions>
+        <execution>
+            <id>install node and npm</id>
+            <goals>
+                <goal>install-node-and-npm</goal>
+            </goals>
+            <configuration>
+                <nodeVersion>v14.17.6</nodeVersion>
+                <npmVersion>6.14.15</npmVersion>
+            </configuration>
+        </execution>
+        <execution>
+            <id>npm install</id>
+            <goals>
+                <goal>npm</goal>
+            </goals>
+            <configuration>
+                <arguments>install</arguments>
+            </configuration>
+        </execution>
+        <execution>
+            <id>test</id>
+            <goals>
+                <goal>yarn</goal>
+            </goals>
+            <phase>test</phase>
+            <configuration>
+                <arguments>test</arguments>
+                <environmentVariables>
+                    <CI>true</CI>
+                </environmentVariables>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
